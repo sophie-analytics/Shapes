@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-increment1 = 0
-increment2 = 2
+increment = 0
+start = 1
 for num1 in range(1, 5):
-    if num1 == 1:
-        print(num1, end=" ")
-    else:
-        for num2 in range(num1 + increment1, num1 + increment2):
+    index = 0
+    for num2 in range(start, 11):
+        if index >= num1:
+            break
+        else:
             print(num2, end=" ")
-    increment1 += 1
-    increment2 += 3
+        index += 1
+    increment += 1
+    start += increment
     print(" ")
