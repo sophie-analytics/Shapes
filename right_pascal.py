@@ -1,12 +1,31 @@
 #!/usr/bin/python3
-for num1 in range(1,8):
-    if num1 % 2 != 0:
-        print("*", end=" ")
-    else:
-        print(" ", end=" ")
-    for num3 in range(2, 5):
-        if (num1 / num3) == 1:
-            print("*", end=" ")
+max_no = 7
+mid_no = max_no // 2
+temp = max_no
+for num1 in range(max_no):
+    temp = temp - 1
+    for num2 in range(num1 + 1):
+        if num1 <= mid_no:
+            if num1 % 2 == 0:
+                if num2 % 2 == 0:
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            else:
+                if num2 % 2 == 1:
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
         else:
-            print(" ", end=" ")
+            if num2 <= temp:
+                if num1 % 2 != 0:
+                    if num2 % 2 != 0:
+                        print("*", end=" ")
+                    else:
+                        print(" ", end=" ")
+                else:
+                    if num2 % 2 == 0:
+                        print("*", end=" ")
+                    else:
+                        print(" ", end=" ")
     print(" ")
